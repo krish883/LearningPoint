@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul, ol {
+            margin: 10px 0 20px 20px;
+        }
+        .example {
+            background-color: #eef;
+            border-left: 5px solid #66f;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operators in C++</h1>
+    
+    <h2>Introduction</h2>
+    <p>Operators in C++ are special symbols used to perform operations on variables and values. They form the core of any calculation or processing in a program. Understanding different types of operators and their usage is crucial for efficient programming.</p>
+    
+    <h3>Types of Operators</h3>
+    <p>C++ supports several types of operators:</p>
+    
+    <h4>Arithmetic Operators</h4>
+    <p>Arithmetic operators perform mathematical operations such as addition, subtraction, multiplication, and division.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+                <td><code>a + b</code></td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Subtraction</td>
+                <td><code>a - b</code></td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+                <td><code>a * b</code></td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+                <td><code>a / b</code></td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulus</td>
+                <td><code>a % b</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Relational Operators</h4>
+    <p>Relational operators are used to compare two values. They return a boolean value indicating the result of the comparison.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>==</td>
+                <td>Equal to</td>
+                <td><code>a == b</code></td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Not equal to</td>
+                <td><code>a != b</code></td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>Greater than</td>
+                <td><code>a &gt; b</code></td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>Less than</td>
+                <td><code>a &lt; b</code></td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>Greater than or equal to</td>
+                <td><code>a &gt;= b</code></td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>Less than or equal to</td>
+                <td><code>a &lt;= b</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Logical Operators</h4>
+    <p>Logical operators are used to combine conditional statements.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&&</td>
+                <td>Logical AND</td>
+                <td><code>a && b</code></td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>Logical OR</td>
+                <td><code>a || b</code></td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>Logical NOT</td>
+                <td><code>!a</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Bitwise Operators</h4>
+    <p>Bitwise operators perform bit-level operations on integer types.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&</td>
+                <td>Bitwise AND</td>
+                <td><code>a & b</code></td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>Bitwise OR</td>
+                <td><code>a | b</code></td>
+            </tr>
+            <tr>
+                <td>^</td>
+                <td>Bitwise XOR</td>
+                <td><code>a ^ b</code></td>
+            </tr>
+            <tr>
+                <td>~</td>
+                <td>Bitwise NOT</td>
+                <td><code>~a</code></td>
+            </tr>
+            <tr>
+                <td>&lt;&lt;</td>
+                <td>Left shift</td>
+                <td><code>a &lt;&lt; 1</code></td>
+            </tr>
+            <tr>
+                <td>&gt;&gt;</td>
+                <td>Right shift</td>
+                <td><code>a &gt;&gt; 1</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Assignment Operators</h4>
+    <p>Assignment operators are used to assign values to variables.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>=</td>
+                <td>Assign</td>
+                <td><code>a = b</code></td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>Add and assign</td>
+                <td><code>a += b</code></td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>Subtract and assign</td>
+                <td><code>a -= b</code></td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>Multiply and assign</td>
+                <td><code>a *= b</code></td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>Divide and assign</td>
+                <td><code>a /= b</code></td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>Modulus and assign</td>
+                <td><code>a %= b</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Other Operators</h4>
+    <p>C++ also provides other operators like:</p>
+    <ul>
+        <li><strong>Increment/Decrement Operators:</strong> <code>++</code> and <code>--</code></li>
+        <li><strong>Conditional (Ternary) Operator:</strong> <code>? :</code></li>
+        <li><strong>Comma Operator:</strong> <code>,</code></li>
+        <li><strong>Sizeof Operator:</strong> <code>sizeof()</code></li>
+        <li><strong>Pointer Operators:</strong> <code>*</code> (dereference) and <code>&</code> (address of)</li>
+    </ul>
+    
+    <h3>Example Program</h3>
+    <div class="example">
+        <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 20;
+    int result;
+
+    // Arithmetic operators
+    result = a + b;
+    cout &lt;&lt; "a + b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result = a - b;
+    cout &lt;&lt; "a - b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result = a * b;
+    cout &lt;&lt; "a * b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result = b / a;
+    cout &lt;&lt; "b / a = " &lt;&lt; result &lt;&lt; endl;
+    
+    result = b % a;
+    cout &lt;&lt; "b % a = " &lt;&lt; result &lt;&lt; endl;
+    
+    // Relational operators
+    cout &lt;&lt; "a == b = " &lt;&lt; (a == b) &lt;&lt; endl;
+    cout &lt;&lt; "a != b = " &lt;&lt; (a != b) &lt;&lt; endl;
+    cout &lt;&lt; "a > b = " &lt;&lt; (a > b) &lt;&lt; endl;
+    cout &lt;&lt; "a < b = " &lt;&lt; (a < b) &lt;&lt; endl;
+    
+    // Logical operators
+    cout &lt;&lt; "(a && b) = " &lt;&lt; (a && b) &lt;&lt; endl;
+    cout &lt;&lt; "(a || b) = " &lt;&lt; (a || b) &lt;&lt; endl;
+    cout &lt;&lt; "!(a && b) = " &lt;&lt; !(a && b) &lt;&lt; endl;
+    
+    // Assignment operators
+    result = a;
+    result += b;
+    cout &lt;&lt; "result += b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result -= b;
+    cout &lt;&lt; "result -= b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result *= b;
+    cout &lt;&lt; "result *= b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result /= b;
+    cout &lt;&lt; "result /= b = " &lt;&lt; result &lt;&lt; endl;
+    
+    result %= b;
+    cout &lt;&lt; "result %= b = " &lt;&lt; result &lt;&lt; endl;
+    
+    return 0;
+}
+        </pre>
+        <p><strong>Output:</strong></p>
+        <p>a + b = 30</p>
+        <p>a - b = -10</p>
+        <p>a * b = 200</p>
+        <p>b / a = 2</p>
+        <p>b % a = 0</p>
+        <p>a == b = 0</p>
+        <p>a != b = 1</p>
+        <p>a > b = 0</p>
+        <p>a < b = 1</p>
+        <p>(a && b) = 1</p>
+        <p>(a || b) = 1</p>
+        <p>!(a && b) = 0</p>
+        <p>result += b = 30</p>
+        <p>result -= b = 10</p>
+        <p>result *= b = 200</p>
+        <p>result /= b = 10</p>
+        <p>result %= b = 10</p>
+    </div>
+    
+    <h2>Key Points and Best Practices</h2>
+    <ul>
+        <li>Use the appropriate operator for the intended operation to avoid logic errors.</li>
+        <li>Be mindful of operator precedence and associativity to ensure expressions are evaluated as expected.</li>
+        <li>Use parentheses to make complex expressions more readable and to explicitly specify the order of operations.</li>
+        <li>Use logical operators to combine multiple conditions in if statements and loops for more complex decision making.</li>
+        <li>Leverage assignment operators to write more concise and efficient code.</li>
+    </ul>
+</body>
+</html>

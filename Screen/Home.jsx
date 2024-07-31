@@ -49,26 +49,34 @@ const Home = () => {
 
   ];
 
+  const Ccourses = [
+    { id: 41, name: 'CPlus', image: require('../Component/Assets/CPlus.png') },
+    { id: 33, name: 'Functions', image: require('../Component/Assets/DS3.jpg') },
+    { id: 34, name: 'NUMPY', image: require('../Component/Assets/DS1.jpg') },
+    { id: 31, name: 'PYTHON', image: require('../Component/Assets/Python.jpg') },
+
+  ];
+
   return (
     <ScrollView style={styles.container}>
 
       <View style={styles.head}>
 
-        <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Image source={require('../Component/Assets/LP.jpg')} style={{ width: 75, height: 65, borderRadius: 20, marginTop: 3, marginLeft: 10 }}></Image>
-          
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Search for any courses.."
-          placeholderTextColor="#A9A9A9"
-        />
-     
+
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search for any courses.."
+            placeholderTextColor="#A9A9A9"
+          />
+
         </View>
       </View>
 
 
       <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-        <Image source={require('../Component/Assets/Homepage.jpeg')} style={{ width: 314, height: 164 , borderRadius:7}}></Image>
+        <Image source={require('../Component/Assets/Homepage.jpeg')} style={{ width: 314, height: 164, borderRadius: 7 }}></Image>
       </View>
 
       <View style={{ marginTop: 20, marginLeft: 12 }}>
@@ -99,26 +107,26 @@ const Home = () => {
 
             {courses.map((course) => (
               <View style={styles.socialMediaPost}>
-                <View style={styles.horizontalSlide}>
-                  <TouchableOpacity key={course.id} onPress={() => handleCourseSelection(course.name)}>
-                    <Image
-                      source={course.image}
-                      style={{ width: 132, height: 84, margin: 8, borderRadius: 7 }}
-                    />
+              <View style={styles.horizontalSlide}>
+                <TouchableOpacity key={course.id} onPress={() => handleCourseSelection(course.name)}>
+                  <Image
+                    source={course.image}
+                    style={{ width: 132, height: 84, margin: 8, borderRadius: 7 }}
+                  />
 
-                  </TouchableOpacity>
-
-                </View>
-
-
-                <View style={styles.contain}>
-                  <Text style={styles.text}>
-                    {course.name}
-                  </Text>
-                </View>
-
+                </TouchableOpacity>
 
               </View>
+
+
+              <View style={styles.contain}>
+                <Text style={styles.text}>
+                  {course.name}
+                </Text>
+              </View>
+
+
+            </View>
 
             ))}
 
@@ -270,7 +278,50 @@ const Home = () => {
 
 
 
+      <View style={{ marginTop: 20, marginLeft: 12 }}>
 
+
+        <Text style={{ fontSize: 18, color: 'black' }}>
+         C++ Programming Language
+        </Text>
+        <View style={{ borderBottomWidth: 2, borderColor: 'black', marginLeft: 3, height: 2, width: 230 }} />
+
+      </View>
+
+      <View>
+        <View style={styles.trendingContainer}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+
+
+            {Ccourses.map((course) => (
+
+
+              <View style={styles.socialMediaPost}>
+                <View style={styles.horizontalSlide}>
+                  <TouchableOpacity key={course.id} onPress={() => handleCourseSelection(course.name)}>
+                    <Image
+                      source={course.image}
+                      style={{ width: 132, height: 84, margin: 8, borderRadius: 7 }}
+                    />
+                  </TouchableOpacity>
+
+                </View>
+
+
+                <View style={styles.contain}>
+                  <Text style={styles.text}>
+                    {course.name}
+                  </Text>
+                </View>
+
+
+              </View>
+
+            ))}
+
+          </ScrollView>
+        </View>
+      </View>
 
 
 
@@ -341,7 +392,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     height: 40,
     borderRadius: 10,
-    marginTop:27,
+    marginTop: 27,
     paddingHorizontal: 15,
     borderWidth: 1,
     borderColor: '#ccc',
@@ -352,7 +403,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     textAlign: 'center',
     flexWrap: 'wrap',
-    color:'black'
+    color: 'black'
   },
 
 })
